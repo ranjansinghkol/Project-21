@@ -25,7 +25,7 @@ function setup() {
 	binLeft = new Wall(600, 315, 10, 75);
 	binRight = new Wall(725, 315, 10, 75);
 
-	ball = Bodies.circle(50, 100, 20, ball_options);
+	ball = Bodies.circle(125, 100, 20, ball_options);
 	World.add(world, ball);
 
 	Engine.run(engine);
@@ -55,5 +55,5 @@ function draw() {
 }
 
 function mouseClicked() {
-	Matter.Body.applyForce(ball, {x: 0, y: 0}, {x: 10, y: 13});
+	Matter.Body.applyForce(ball, {x: ball.position.x, y: ball.position.y}, {x: 105, y: 118});
 }
